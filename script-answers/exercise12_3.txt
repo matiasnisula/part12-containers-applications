@@ -1,0 +1,11 @@
+Script started on 2022-12-18 15:46:16+02:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="126" LINES="65"]
+]0;matnisul@lx0-fuxi242: ~/CS/part12-containers-applications[01;32mmatnisul@lx0-fuxi242[00m:[01;31m~/CS/part12-containers-applications[00m$ do[K[Kdocker run hello-worldcd ..[Kat exercise12_2.txt d ..[Kdocker run hello-world[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K container -lsa[K[K[K[K-is-it-ia-ir-it-i -i[C[C crazy_wiles 
+[?2004h]0;root@abe42994aca8: /root@abe42994aca8:/# [K]0;root@abe42994aca8: /root@abe42994aca8:/# nano use r/src/app/index.js 
+[?2004l[?2004h[?1049h[22;0;0t[1;65r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[63;57H(B[0;7m[ Reading... ](B[m[63;56H(B[0;7m[ Read 1 line ](B[m[H(B[0;7m  GNU nano 6.2 [40busr/src/app/index.js [49b [1;125H(B[m[64d(B[0;7m^G(B[m Help[64;16H(B[0;7m^O(B[m Write Out   (B[0;7m^W(B[m Where Is    (B[0;7m^K(B[m Cut[64;61H(B[0;7m^T(B[m Execute     (B[0;7m^C(B[m Location    (B[0;7mM-U(B[m Undo[106G(B[0;7mM-A(B[m Set Mark[65d(B[0;7m^X(B[m Exit[65;16H(B[0;7m^R(B[m Read File   (B[0;7m^\(B[m Replace     (B[0;7m^U(B[m Paste[61G(B[0;7m^J(B[m Justify     (B[0;7m^/(B[m Go To Line  (B[0;7mM-E(B[m Redo[106G(B[0;7mM-6(B[m Copy[2d[?12l[?25h[?25l[1;77H(B[0;7m*[63d(B[m[K[1;125H[2dconsole.log((B[0;1m[35m'Hello World'[39m(B[m)[?12l[?25h[?25l[63;57H(B[0;7m[ Writing... ](B[m[1;77H(B[0;7m [125G(B[m[63;56H(B[0;7m[ Wrote 1 line ](B[m[?12l[?25h[2;27H[?25l[63d[J[65d[?12l[?25h[65;1H[?1049l[23;0;0t[?1l>[?2004l^Z[?2004h]0;root@abe42994aca8: /root@abe42994aca8:/# [Kcat usr/src/app/index.js 
+[?2004lconsole.log('Hello World')
+[?2004h]0;root@abe42994aca8: /root@abe42994aca8:/# exit
+[?2004lexit
+]0;matnisul@lx0-fuxi242: ~/CS/part12-containers-applications[01;32mmatnisul@lx0-fuxi242[00m:[01;31m~/CS/part12-containers-applications[00m$ exit
+exit
+
+Script done on 2022-12-18 15:47:33+02:00 [COMMAND_EXIT_CODE="0"]
