@@ -7,6 +7,19 @@ const configs = require("../util/config");
 
 let visits = 0;
 
+redisSerivce
+  .getAsync("added_todos")
+  .then((result) => {
+    if (result === null) {
+      redisSerivce.setAsync("added_todos", 0).catch((error) => {
+        console.log(error);
+      });
+    }
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+
 /* GET index data. */
 router.get("/", async (req, res) => {
   visits++;
@@ -18,7 +31,7 @@ router.get("/", async (req, res) => {
 });
 
 router.get("/statistics", async (req, res) => {
-  const counter = (await redisSerivce.getAsync("added_todos")) || 0;
+  const counter = await redisSerivce.getAsync("added_todos");
   res.send({
     added_todos: Number(counter),
   });
