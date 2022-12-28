@@ -1,0 +1,49 @@
+version: "3.8"
+
+services:
+  mongo:
+    image: mongo
+    ports:
+      - 3456:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+      MONGO_INITDB_DATABASE: phonebook_db
+    volumes: 
+      - ./phonebook-backend/mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js
+      - ./phonebook-backend/mongo_data:/data/db
+  nginx:
+    image: nginx:1.20.1
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - 8080:80
+    container_name: reverse-proxy
+    depends_on:
+      - phonebook-backend
+      - phonebook-frontend
+  phonebook-backend:
+    image: phonebook-backend
+    build:
+      context: ./phonebook-backend
+      dockerfile: dev.Dockerfile
+    volumes:
+      - ./phonebook-backend:/usr/src/phonebook-backend
+    ports:
+      - 3001:3001
+    container_name: phonebook-backend-dev
+    environment:
+      - MONGO_URL=mongodb://matias:admin123@mongo:27017/phonebook_db
+      - PORT=3001
+  phonebook-frontend:
+    image: phonebook-frontend
+    build:
+      context: ./phonebook-frontend
+      dockerfile: dev.Dockerfile
+    volumes:
+      - ./phonebook-frontend:/usr/src/phonebook-frontend
+    ports:
+      - 3000:3000
+    container_name: phonebook-frontend
+    environment:
+      - REACT_APP_BACKEND_URL=http://localhost:8080/api/persons
